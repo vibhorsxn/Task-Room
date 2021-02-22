@@ -1,0 +1,75 @@
+<table id="table">
+    <tr>
+        <th>Assignment Name</th>
+        <th>Assignment Manager</th>
+        <th>Skills Required</th>
+        <th>Description</th>
+        <th>Last Date To Apply</th>
+    </tr>
+    <% for(let i of project_list) { %>
+        <% var pDate=new Date(i.deadline) %>
+            <% pDate.setHours(0,0,0,0) %>
+                <% var currDate=new Date() %>
+                    <% currDate.setHours(0,0,0,0) %>
+                        <% if(pDate < currDate) {%>
+                            <% continue %>
+                                <% } %>
+                                    <tr>
+                                        <td>
+                                            <%= i.assignment_name %>
+                                        </td>
+                                        <td>
+                                            <%= i.manager %>
+                                        </td>
+                                        <td>
+                                            <%= i.skills %>
+                                        </td>
+                                        <td>
+                                            <%= i.description %>
+                                        </td>
+                                        <td>
+                                            <% var d=pDate.getDate() %>
+                                                <% var m=pDate.getMonth()+1; %>
+                                                    <% var y=pDate.getYear()+1900 %>
+                                                        <span>
+                                                            <%= d %>-
+                                                        </span>
+                                                        <span>
+                                                            <%= m %>-
+                                                        </span>
+                                                        <span>
+                                                            <%= y %>
+                                                        </span>
+                                        </td>
+
+                                        <% if(user.role==="employee" ) { %>
+                                            <% let flag=true %>
+                                                <% for(let j of i.applicants) { %>
+                                                    <% if(j.email===user.email) { %>
+                                                        <td><button class="apply-btn" disabled>Apply</button>
+                                                            <% flag=false %>
+                                                                <% break %>
+                                                                    <% } %>
+                                                                        <% } %>
+                                                                            <% if(flag) { %>
+                                                        <td>
+                                                            <a href="/employee/apply/?job=<%= i.assignment_name %>"><button
+                                                                    class="apply-btn">
+                                                                    <i class="fas fa-check-circle"></i></button></a>
+                                                        </td>
+                                                        <% } %>
+                                                            <% } %>
+                                                                <% if(i.user_fav.includes( locals.user._id )) {%>
+                                                                    <td><a href="/employee/alljobs/unfavourite/<%= i._id %>"
+                                                                            id="unfav"><i class="fas fa-star"></i></a>
+                                                                    </td>
+                                                                    <% } else { %>
+                                                                        <td><a href="/employee/alljobs/add_favourite/<%= i._id %>"
+                                                                                id="fav"><i class="fas fa-star"></i></a>
+                                                                        </td>
+                                                                        <% } %>
+
+                                    </tr>
+                                    <% } %>
+
+</table>

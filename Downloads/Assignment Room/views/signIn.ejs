@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html id="signin-html">
+
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/sign_in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+        integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw=="
+        crossorigin="anonymous" />
+
+</head>
+
+<body class="signin-body">
+    <!-- <form action="/authenticate_user" method="POST">
+        <table>
+            <caption>Sign In</caption>
+            <tr>
+                <td>Username</td>
+                <td><input type="email" name="username" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><button>Sign In </button></td>
+            </tr>
+            <tr>
+                <td>Don't have an account ?</td>
+                <td><a href="/signUp">Create an account</a></td>
+            </tr>
+        </table>
+    </form> -->
+
+    <div class="signin-box">
+        <h1>SIGN IN</h1>
+        <form action="/authenticate_user" method="POST">
+            <div class="user-box">
+                <input type="email" name="username" required>
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <button>
+
+                Sign In</button>
+            <br>
+            <!-- <p style="color: wheat;">Don't have an account ?</p> -->
+            <h3 style="color: wheat;">Don't have an account ?</h3>
+            <a href="/signUp">Create an account</a>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
+        integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
+        crossorigin="anonymous"></script>
+    <script>
+    <% if (successFlashMessage) { %>
+            new Noty({
+                type: 'success',
+                text: '<%= successFlashMessage %>',
+                layout: 'topRight',
+                theme: 'bootstrap-v3',
+                timeout: 2000,
+                progressBar: true
+            }).show();
+    <% } %>
+    <% if (errorFlashMessage) { %>
+            new Noty({
+                type: 'error',
+                text: '<%= errorFlashMessage %>',
+                layout: 'topRight',
+                theme: 'bootstrap-v3',
+                timeout: 2000,
+                progressBar: true
+            }).show();
+    <% } %>
+    </script>
+</body>
+
+</html>

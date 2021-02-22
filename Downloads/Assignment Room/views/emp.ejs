@@ -1,0 +1,28 @@
+<script src="https://kit.fontawesome.com/f729c73041.js" crossorigin="anonymous"></script>
+
+<!-- <body style="background-image: url(https://cdn.slashgear.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg);
+background-repeat: no-repeat;
+background-size: cover;"> -->
+
+<h1 style=" color: black; 
+    background-repeat: no-repeat; 
+    background-size: cover; text-shadow: 1px 2px 5px cadetblue;
+     letter-spacing: 2px; 
+     text-align: center; padding: 20px; 
+     background-color: rgb(216, 191, 216,0.6); 
+     box-shadow: 10px 2px 0px gray; 
+     margin-top: 10px;">EMPLOYEE's PORTAL
+    <div id="filter">
+        <form action="/employee/alljobs/filter" method="POST">
+            <select name='job'>
+                <option value="all jobs">All Jobs</option>
+                <option value="favourites">Favourites</option>
+                <option value="applied jobs">Applied Jobs</option>
+            </select>
+            <button>Apply</button>
+        </form>
+    </div>
+</h1>
+
+<%- include("_table") %>
+    <script src="/js/tableScript.js"></script>

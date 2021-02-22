@@ -1,0 +1,47 @@
+#passwordField {
+    display: none;
+    vertical-align: bottom;
+  }
+  
+  #passwordField input {
+    width: 200px;
+    height: 30px;
+  }
+  
+  .box-container {
+    background: rgba(0, 0, 0, 0.5);
+    margin: 50px auto;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    font-family: sans-serif;
+    transition: all 1s linear;
+  }
+  
+  .box-container h1 {
+    margin: 0 0 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  .box-container {
+    color: white;
+    border-collapse: separate;
+    border-spacing: 15px;
+    font-size: 18px;
+  }
+  
+  .box-container button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    background-color: white;
+  }
+
+  .body-background{
+    background: linear-gradient(#141e30 , #243b55);
+    height: 100vh;
+  }

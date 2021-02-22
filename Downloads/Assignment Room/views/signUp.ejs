@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html id="signup-html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/sign_up.css">
+</head>
+
+<body class="signup-body" >
+    <!-- <form action="/create_account" method="POST">
+        <table id="signup">
+            <caption><h2>Sign Up</h2></caption>
+            <tr>
+                <td class="user-box">Name</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td class="user-box">Username</td>
+                <td><input type="email" name="email" placeholder="Enter Your Email Id" required></td>
+            </tr>
+            <tr>
+                <td class="user-box">Job Role</td>
+                <td><input type="text" name="role" value="<%= locals.role %>" readonly></td>
+            </tr>
+            <tr>
+                <td class="user-box">Password</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td class="user-box">Confirm Password</td>
+                <td><input type="password" name="confirm_password" required></td>
+            </tr>
+            <tr>
+                <td><button>Sign Up </button></td>
+            </tr>
+            <tr>
+                <td>Already have an account ?</td>
+                <td><a href="/">Sign In</a></td>
+            </tr>
+        </table>
+    </form> -->
+
+<div class="signup-box">
+<h1>Sign-Up</h1>
+<form action="/create_account" method="POST">
+    <div class="user-box">
+        <input type="text" name="name" required>
+        <label>Name</label>
+    </div>
+    <div class="user-box">
+        <input type="email" name="email" required>
+        <label>Email</label>
+    </div>
+    <div class="user-box">
+        <br>
+        <input style="color: red;" type="text" name="role" value="<%= locals.role %>" readonly>
+        <label>Job Role</label>
+    </div>
+    <div class="user-box">
+        <input type="password" name="password" required>
+        <label>Password</label>
+    </div>
+    <div class="user-box">
+        <input type="password" name="confirm_password" required>
+        <label>Confirm Password</label>
+    </div>
+    <button>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Sign Up </button>
+        <br>
+        <br>
+    <p style="color: wheat;">Already have a account</p> <a href="/">
+        
+        Sign In
+    </a>
+    
+</form>
+</div>
+
+</body>
+
+</html>

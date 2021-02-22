@@ -1,0 +1,106 @@
+#form-html {
+  height: 100%;
+}
+.form-body {
+  margin: 0;
+  padding: 0;
+
+  background: linear-gradient(#141e30, #243b55);
+}
+.form-box {
+  font-family: sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.form-box h1 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.form-box .manager-box {
+  position: relative;
+}
+
+.form-box .manager-box input,
+.form-box .manager-box textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid rgb(61, 52, 52);
+  outline: none;
+  background-color: transparent;
+  caret-color: hotpink;
+}
+
+.form-box .manager-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.form-box .manager-box input:focus ~ label,
+.form-box .manager-box input:valid ~ label,
+.form-box .manager-box textarea:focus ~ label,
+.form-box .manager-box textarea:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+  filter: invert();
+}
+
+button {
+  /* font-family: 'Courier New', Courier, monospace; */
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+  border-radius: 20%;
+  /* font-size: 1.5rem; */
+}
+
+button:hover {
+  transform: translate("swing");
+  background-color: #03e9f4;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+}
+
+#edit-job {
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+  border-radius: 20%;
+}
+#edit-job:hover {
+  /* transform: translate("swing"); */
+  background-color: #03e9f4;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+}

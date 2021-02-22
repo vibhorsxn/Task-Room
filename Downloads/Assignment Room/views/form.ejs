@@ -1,0 +1,55 @@
+<html id="form-html">
+<link rel="stylesheet" href="/css/job_form.css">
+
+
+<body class="form-body">
+    <div class="form-box">
+        <h1>Create Job 📑</h1>
+        <form action="/manager/submit_form" method="POST">
+            <div class="manager-box">
+                <input type="text" name="assignment_name" id="asg_name" required />
+                <label for="asg_name">Assignment Name</label>
+            </div>
+
+            <div class="manager-box">
+                <br>
+                <input style="color: red;" type="text" id="manager" name="manager" value="<%= user.name %>" hidden
+                    readonly>
+                <!-- <label for="manager">Manager Name</label> -->
+            </div>
+
+            <div class="manager-box">
+                <br>
+                <input style="color: red;" type="email" id="manager_mail" name="manager_email" value="<%= user.email %>"
+                    hidden readonly>
+                <!-- <label for="manager_mail">Manager Email</label> -->
+            </div>
+
+            <div class="manager-box">
+
+                <input type="text" name="skills" id="skills" required />
+                <label for="skills">Skills Required</label>
+            </div>
+
+            <div class="manager-box">
+                <br>
+                <textarea name="description" id="description" rows="2" maxlength="500"
+                    placeholder="Explain your job in 500 characters" required></textarea>
+                <label for="description">Description</label>
+            </div>
+
+            <div class="manager-box">
+                <br>
+                <input type="date" name="deadline" id="deadline" required />
+                <label for="deadline">Deadline</label>
+            </div>
+
+            <button>Submit</button>
+
+        </form>
+    </div>
+
+    <script src="/js/form.js"></script>
+</body>
+
+</html>

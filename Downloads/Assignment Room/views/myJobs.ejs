@@ -1,0 +1,64 @@
+<script src="https://kit.fontawesome.com/f729c73041.js" crossorigin="anonymous"></script>
+
+<h1
+    style="
+    letter-spacing: 2px; text-align: center; padding: 20px; background-color: rgb(216, 191, 216,0.6); box-shadow: 10px 2px 0px gray; margin-top: 10px;  color: white; text-shadow: 1px 2px 5px black;">
+    MY JOB's</h1>
+<table id="table">
+    <tr>
+        <th>Assignment Name</th>
+        <th>Assignment Manager</th>
+        <th>Skills Required</th>
+        <th>Description</th>
+        <th>Last Date To Apply</th>
+    </tr>
+    <% for(let i of project_list) { %>
+        <% var pDate=new Date(i.deadline) %>
+            <% pDate.setHours(0,0,0,0) %>
+                <% var currDate=new Date() %>
+                    <% currDate.setHours(0,0,0,0) %>
+                        <% if(pDate < currDate) {%>
+                            <% continue %>
+                                <% } %>
+                                    <tr>
+                                        <td>
+                                            <%= i.assignment_name %>
+                                        </td>
+                                        <td>
+                                            <%= i.manager %>
+                                        </td>
+                                        <td>
+                                            <%= i.skills %>
+                                        </td>
+                                        <td>
+                                            <%= i.description %>
+                                        </td>
+                                        <td>
+                                            <% var d=pDate.getDate() %>
+                                                <% var m=pDate.getMonth()+1; %>
+                                                    <% var y=pDate.getYear()+1900 %>
+                                                        <span>
+                                                            <%= d %>-
+                                                        </span>
+                                                        <span>
+                                                            <%= m %>-
+                                                        </span>
+                                                        <span>
+                                                            <%= y %>
+                                                        </span>
+                                        </td>
+                                        <td>
+                                            <a href="/manager/edit_form/?id=<%= i._id %>" class="edit">
+                                                <i class="fas fa-pen"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="/manager/delete_application/?id=<%= i._id %>" class="delete">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                    <% } %>
+
+</table>

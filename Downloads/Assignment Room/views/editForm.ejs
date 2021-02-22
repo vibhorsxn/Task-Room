@@ -1,0 +1,95 @@
+<html id="form-html">
+<link rel="stylesheet" href="/css/job_form.css">
+
+
+
+<body class="form-body">
+    <div class="form-box">
+        <h1>Edit Job 📑</h1>
+        <form action="/manager/save_changes/?formId=<%= formDetails._id %>" method="POST">
+            <div class="manager-box">
+                <input type="text" name="assignment_name" id="asg_name" value="<%=formDetails.assignment_name %>"
+                    required />
+                <label for="asg_name">Assignment Name:</label>
+            </div>
+            <div class="manager-box">
+                <br>
+                <input type="text" id="manager" name="manager" value="<%=locals.user.name %>" readonly>
+                <label for="manager">Manager Name</label>
+            </div>
+
+            <div class="manager-box">
+                <br>
+                <input type="email" id="manager_mail" name="manager_email" value="<%= locals.user.email %>" readonly>
+                <label for="manager_mail">Manager Email</label>
+            </div>
+
+            <div class="manager-box">
+                <input type="text" name="skills" id="skills" value="<%=formDetails.skills %>" required />
+                <label for="skills">Skills Required</label>
+            </div>
+
+            <div class="manager-box">
+                <br><br>
+                <textarea name="description" id="description" rows="6" maxlength="500"
+                    required><%=formDetails.description %></textarea>
+                <label for="description">Description</label>
+            </div>
+
+            <div class="manager-box">
+                <br>
+                <br>
+                <input type="date" name="deadline" id="deadline" value="<%=formDetails.deadline%>" required />
+                <label for="deadline">Deadline</label>
+            </div>
+            <!-- <input  type="submit" value="Edit"> -->
+            <button id="edit-job" type="submit">Edit</button>
+        </form>
+    </div>
+    <%- include("_footer") %>
+
+        <script src="/js/form.js"></script>
+</body>
+
+
+<!-- <div class="form-box">
+    <h1>Edit Job 📑</h1>
+    <form action="/manager/save_changes/?formId=<%= formDetails._id %>" method="POST">
+    <div class="manager-box">
+        <input type="text" name="assignment_name" id="asg_name"
+                            value="<%=formDetails.assignment_name %>" required />
+                            <label for="asg_name">Assignment Name:</label>                    
+    </div>
+    <div class="manager-box">
+        <br>
+        <input type="text" id="manager" name="manager" value="<%=locals.user.name %>" readonly>
+        <label for="manager">Manager Name</label>
+    </div>
+
+    <div class="manager-box">
+        <br>
+        <input type="email" id="manager_mail" name="manager_email" value="<%= locals.user.email %>"
+                            readonly>
+                            <label for="manager_mail">Manager Email</label>
+    </div>
+
+    <div class="manager-box">
+        <input type="text" name="skills" id="skills" value="<%=formDetails.skills %>" required />
+        <label for="skills">Skills Required</label>
+    </div>
+
+    <div class="manager-box">
+        <br><br>
+        <textarea name="description" id="description" rows="6" maxlength="500"
+                            required><%=formDetails.description %></textarea>
+                            <label for="description">Description</label>
+    </div>
+
+    <div class="manager-box">
+        <input type="date" name="deadline" id="deadline" value="<%=formDetails.deadline%>" required />
+        <label for="deadline">Deadline:</label>
+    </div>
+    <input type="submit" value="Edit">
+    
+    </form>
+</div> -->

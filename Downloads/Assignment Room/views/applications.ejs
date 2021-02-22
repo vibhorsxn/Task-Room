@@ -1,0 +1,26 @@
+<h1
+    style="
+    letter-spacing: 2px; text-align: center; padding: 20px; background-color: rgb(216, 191, 216,0.6); box-shadow: 10px 2px 0px gray; margin-top: 10px;  color: rgb(0, 0, 0); text-shadow: 1px 2px 5px rgb(211, 255, 65);">
+    APPLICATION's</h1>
+<% for(let i of job_list) { %>
+    <h2>
+        Assignment Name: <%= i.assignment_name %>
+    </h2>
+    <a style="display: flex;" href="/manager/delete_application/?id=<%= i._id %>">delete</a>
+    <table id="table">
+        <tr>
+            <th>Applicant Name</th>
+            <th>Applicant Email id</th>
+        </tr>
+        <% for(let j of i.applicants) {%>
+            <tr>
+                <td>
+                    <%= j.name %>
+                </td>
+                <td>
+                    <%= j.email %>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+    <% } %>

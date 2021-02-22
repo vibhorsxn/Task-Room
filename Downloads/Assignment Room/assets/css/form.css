@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+/* NAVBAR */
+nav ul {
+  background-color: rgb(182, 182, 228);
+  text-align: right;
+  padding-right: 30px;
+  height: 45px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+nav ul li {
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+
+nav ul li a {
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+/* nav ul li a:hover {
+  font-size: 22px;
+  transition: ease-in-out 0.5s;
+} */
+
+nav ul li a:active {
+  background-color: #0a1216;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2);
+  background-color: turquoise;
+}
+
+/* nav #logout {
+  background-color: rgb(249, 131, 131);
+  border-radius: 15px;
+} */
+
+/* FORM */
+#form {
+  margin: 10px;
+  box-shadow: 0px 0px 3px gray;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 50%;
+  padding-top: 10px;
+}
+
+#form > caption {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 22px;
+  line-height: 37px;
+  background-color: #faba3a;
+  box-shadow: 0px 0px 2px 1px #b49f7c;
+}
+
+#form td {
+  padding: 5px;
+  font-size: 18px;
+}
+
+#form input,
+#form select {
+  height: 27px;
+}
+
+#form input,
+#form select,
+#form textarea {
+  font-size: 16px;
+  text-indent: 4px;
+  /* border: 1px solid black; */
+  border: none;
+  width: 300px;
+  box-shadow: 0px 0px 3px gray;
+  resize: none;
+  outline-color: #ffab00;
+}
+
+#form button {
+  font-size: 18px;
+  padding: 7px 30px;
+  background-color: #ffab00;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 1px #b49f7c;
+  margin-top: 10px;
+}
+
+/* TABLE */
+
+#table {
+  width: 97%;
+  margin: 30px 10px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 0px gray;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+#table th,
+#table td {
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border-right: 1px solid rgb(0, 155, 0);
+  border-bottom: 1px solid rgb(0, 155, 0);
+  font-size: 18px;
+}
+
+#table th {
+  background-color: transparent;
+  font-size: 17px;
+  font-family: sans-serif;
+  border-bottom: 1px double green;
+  border-width: 0px 2rem 0px 0px;
+  border-style: dotted;
+  border-bottom: 2px solid black;
+}
+#table td {
+  border-radius: 15px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+#passwordField {
+  display: none;
+}
+
+table {
+  background: linear-gradient(rgb(81, 231, 76), rgb(139, 223, 223));
+}
+
+#fav {
+  color: white;
+}
+
+#unfav {
+  color: rgb(212, 154, 7);
+}
+
+/* Footer */
+footer {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0%;
+  background-color: black;
+  color: white;
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 10px;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Filter */
+#filter select {
+  width: 150px;
+  font-size: 18px;
+  outline: none;
+}
+
+#filter button {
+  margin-left: -10px;
+  font-size: 18px;
+  padding: 1px 5px;
+  background-color: rgb(0, 125, 197);
+  border: none;
+  color: white;
+  outline: none;
+}
+
+/* DELETE AND EDIT BUTTON */
+.edit {
+  color: blue;
+}
+
+.delete {
+  color: red;
+}
+

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/profile.css">
+
+<body class="body-background">
+    <table class="box-container">
+        <caption>
+            <h1>My Profile</h1>
+        </caption>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <%= locals.user.name %>
+            </td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>
+                <%= locals.user.email %>
+            </td>
+        </tr>
+        <tr>
+            <td>Role:</td>
+            <td>
+                <%= locals.user.role %>
+            </td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>*********</td>
+        </tr>
+        <% let act %>
+            <% (locals.user.role==="employee" ) ? (act="employee" ) : (act="manager" ) %>
+                <tr id="passwordField">
+
+                    <form action="/<%= act %>/profile/password" method="POST">
+                        <td>New Password:<input type="password" name="password" required></td>
+                        <td>Confirm New Password:<input type="password" name="confirmPassword" required></td>
+
+                        <td><button>Save Password</button></td>
+                    </form>
+
+                </tr>
+                <tr>
+                    <td> <button onclick="changePassword()" id="changeBtn">Change Password</button>
+                    </td>
+                </tr>
+    </table>
+</body>
+<script src="/js/form.js"></script>
